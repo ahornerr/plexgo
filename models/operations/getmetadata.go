@@ -21,38 +21,38 @@ func (o *GetMetadataRequest) GetRatingKey() float64 {
 }
 
 type Stream struct {
-	ID                   *int    `json:"id,omitempty"`
-	StreamType           *int    `json:"streamType,omitempty"`
-	Default              *bool   `json:"default,omitempty"`
-	Codec                *string `json:"codec,omitempty"`
-	Index                *int    `json:"index,omitempty"`
-	Bitrate              *int    `json:"bitrate,omitempty"`
-	BitDepth             *int    `json:"bitDepth,omitempty"`
-	ChromaLocation       *string `json:"chromaLocation,omitempty"`
-	ChromaSubsampling    *string `json:"chromaSubsampling,omitempty"`
-	CodedHeight          *int    `json:"codedHeight,omitempty"`
-	CodedWidth           *int    `json:"codedWidth,omitempty"`
-	ColorPrimaries       *string `json:"colorPrimaries,omitempty"`
-	ColorRange           *string `json:"colorRange,omitempty"`
-	ColorSpace           *string `json:"colorSpace,omitempty"`
-	ColorTrc             *string `json:"colorTrc,omitempty"`
-	FrameRate            *int    `json:"frameRate,omitempty"`
-	HasScalingMatrix     *bool   `json:"hasScalingMatrix,omitempty"`
-	Height               *int    `json:"height,omitempty"`
-	Level                *int    `json:"level,omitempty"`
-	Profile              *string `json:"profile,omitempty"`
-	RefFrames            *int    `json:"refFrames,omitempty"`
-	ScanType             *string `json:"scanType,omitempty"`
-	StreamIdentifier     *string `json:"streamIdentifier,omitempty"`
-	Width                *int    `json:"width,omitempty"`
-	DisplayTitle         *string `json:"displayTitle,omitempty"`
-	ExtendedDisplayTitle *string `json:"extendedDisplayTitle,omitempty"`
-	Selected             *bool   `json:"selected,omitempty"`
-	Channels             *int    `json:"channels,omitempty"`
-	Language             *string `json:"language,omitempty"`
-	LanguageTag          *string `json:"languageTag,omitempty"`
-	LanguageCode         *string `json:"languageCode,omitempty"`
-	SamplingRate         *int    `json:"samplingRate,omitempty"`
+	ID                   *int     `json:"id,omitempty"`
+	StreamType           *int     `json:"streamType,omitempty"`
+	Default              *bool    `json:"default,omitempty"`
+	Codec                *string  `json:"codec,omitempty"`
+	Index                *int     `json:"index,omitempty"`
+	Bitrate              *int     `json:"bitrate,omitempty"`
+	BitDepth             *int     `json:"bitDepth,omitempty"`
+	ChromaLocation       *string  `json:"chromaLocation,omitempty"`
+	ChromaSubsampling    *string  `json:"chromaSubsampling,omitempty"`
+	CodedHeight          *int     `json:"codedHeight,omitempty"`
+	CodedWidth           *int     `json:"codedWidth,omitempty"`
+	ColorPrimaries       *string  `json:"colorPrimaries,omitempty"`
+	ColorRange           *string  `json:"colorRange,omitempty"`
+	ColorSpace           *string  `json:"colorSpace,omitempty"`
+	ColorTrc             *string  `json:"colorTrc,omitempty"`
+	FrameRate            *float64 `json:"frameRate,omitempty"`
+	HasScalingMatrix     *bool    `json:"hasScalingMatrix,omitempty"`
+	Height               *int     `json:"height,omitempty"`
+	Level                *int     `json:"level,omitempty"`
+	Profile              *string  `json:"profile,omitempty"`
+	RefFrames            *int     `json:"refFrames,omitempty"`
+	ScanType             *string  `json:"scanType,omitempty"`
+	StreamIdentifier     *string  `json:"streamIdentifier,omitempty"`
+	Width                *int     `json:"width,omitempty"`
+	DisplayTitle         *string  `json:"displayTitle,omitempty"`
+	ExtendedDisplayTitle *string  `json:"extendedDisplayTitle,omitempty"`
+	Selected             *bool    `json:"selected,omitempty"`
+	Channels             *int     `json:"channels,omitempty"`
+	Language             *string  `json:"language,omitempty"`
+	LanguageTag          *string  `json:"languageTag,omitempty"`
+	LanguageCode         *string  `json:"languageCode,omitempty"`
+	SamplingRate         *int     `json:"samplingRate,omitempty"`
 }
 
 func (o *Stream) GetID() *int {
@@ -160,7 +160,7 @@ func (o *Stream) GetColorTrc() *string {
 	return o.ColorTrc
 }
 
-func (o *Stream) GetFrameRate() *int {
+func (o *Stream) GetFrameRate() *float64 {
 	if o == nil {
 		return nil
 	}
@@ -806,6 +806,10 @@ type GetMetadataMetadata struct {
 	AudienceRatingImage    *string               `json:"audienceRatingImage,omitempty"`
 	HasPremiumPrimaryExtra *string               `json:"hasPremiumPrimaryExtra,omitempty"`
 	RatingImage            *string               `json:"ratingImage,omitempty"`
+	ParentTitle            *string               `json:"parentTitle,omitempty"`
+	ParentIndex            *int                  `json:"parentIndex,omitempty"`
+	GrandparentTitle       *string               `json:"grandparentTitle,omitempty"`
+	Index                  *int                  `json:"index,omitempty"`
 	Media                  []GetMetadataMedia    `json:"Media,omitempty"`
 	Genre                  []GetMetadataGenre    `json:"Genre,omitempty"`
 	Country                []GetMetadataCountry  `json:"Country,omitempty"`

@@ -530,6 +530,7 @@ type GetSessionsMetadata struct {
 	Type                 *string            `json:"type,omitempty"`
 	UpdatedAt            *int               `json:"updatedAt,omitempty"`
 	ViewOffset           *int               `json:"viewOffset,omitempty"`
+	Year                 *int               `json:"year,omitempty"`
 	Media                []GetSessionsMedia `json:"Media,omitempty"`
 	User                 *GetSessionsUser   `json:"User,omitempty"`
 	Player               *Player            `json:"Player,omitempty"`
