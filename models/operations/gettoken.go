@@ -152,7 +152,7 @@ type GetTokenResponseBody struct {
 	CreatedAt        *time.Time        `json:"createdAt,omitempty"`
 	ExpiresAt        *time.Time        `json:"expiresAt,omitempty"`
 	AuthToken        *string           `json:"authToken,omitempty"`
-	NewRegistration  *string           `json:"newRegistration,omitempty"`
+	NewRegistration  *bool             `json:"newRegistration,omitempty"`
 }
 
 func (g GetTokenResponseBody) MarshalJSON() ([]byte, error) {
@@ -243,7 +243,7 @@ func (o *GetTokenResponseBody) GetAuthToken() *string {
 	return o.AuthToken
 }
 
-func (o *GetTokenResponseBody) GetNewRegistration() *string {
+func (o *GetTokenResponseBody) GetNewRegistration() *bool {
 	if o == nil {
 		return nil
 	}
